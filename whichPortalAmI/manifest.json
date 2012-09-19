@@ -1,0 +1,21 @@
+{
+  "name" : "Which portal am I",
+  "version" : "1.0",
+  "description" : "Shows the portal you are currently on",
+ "permissions": [
+    "tabs"
+  ],
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://portal.nottingham.ac.uk/*",
+        "https://portal.nottingham.ac.uk/*"
+      ],
+      "js" : ["contentScript.js"],
+      "run_at" : "document_idle",
+      "all_frames" : false
+    }
+  ],
+  
+  "manifest_version": 2
+}
